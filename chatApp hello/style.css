@@ -2,17 +2,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s all;
 }
 html{
     font-size: 62.5%;
 }
 .nav{
-    --startperc: 0%;
-    --endperc: 40%;
+    --startperc: 30%;
+    --endperc: 70%;
     height: 10vh;
     width: 100%;
     background: linear-gradient(to right, transparent, var(--startperc), rgba(255, 255, 255, 0.527), var(--endperc), transparent);
+    background-blend-mode: lighten;
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.226); */
     position: absolute;
     top: 0;
@@ -34,6 +36,7 @@ html{
     gap: 0.8rem;
 }
 .menu{
+    position: absolute;
     margin: 0 auto;
     gap: 3rem;
 }
@@ -43,6 +46,12 @@ html{
 .logodiv div, .signing div, .menu div{
     font-size: 2rem;
     color: white;
+    cursor: pointer;
+}
+.logodiv .hello{
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 .logodiv .icondiv, .logodiv .hello{
     font-size:2.5rem;
@@ -70,8 +79,29 @@ html{
 }
 .signing .signup, .signing .signin{
     font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
 }
-
+.signbtn{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid white;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+}
+.signbtn.active{
+    display: flex;
+}
+.signbtn:hover{
+    border: none;
+    background-color: white;
+    color: black;
+}
 
 .topdiv{
     display: flex;
@@ -107,5 +137,314 @@ html{
     right: 0;
     bottom: 0;
     backdrop-filter: blur(20px);
+}
+.toptext{
+    display: flex;
+    z-index: 4;
+    position: absolute;
+    top: 10vh;
+    height: 90vh;
+    width: 100%;
+    flex-direction: row;
+    overflow: hidden;
+    /* background-color: aquamarine; */
+}
+.left{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 45%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    padding: 7%;
+    justify-content: center;
+}
+.divtitle{
+    color: white;
+    font-size: 5rem;
+    font-weight: 600;
+    transform: translate(0, -15%);
+    text-shadow: 1px 1px 20px #1a1a1a86;
+}
+.btn1{
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 400;
+    width: max-content;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1.5rem 2rem;
+    border-radius: 2.7rem;
+    background-color: rgb(80,180,107);
+    margin-top: 2rem;
+    transform: translate(0, -10%);
+}
+.btn1:hover, .signup:hover{
+    background-color: rgb(87, 158, 106);
+    letter-spacing: 4px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.356);
+}
+.signin:hover{
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.356);
 
 }
+.right{
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 55%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mobile{
+    height: 70rem;
+    width: 40rem;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom, rgb(132, 218, 132), rgb(76, 122, 76));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    filter: drop-shadow(1rem 1rem 0 rgb(60, 95, 60));
+}
+.screenborder{
+    height: 66rem;
+    width: 38rem;
+    border-radius: 2rem;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2rem solid white; */
+}
+.mobile::after{
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #73BC73;
+    width: 1.5rem;
+    height: 10rem;
+    border-radius: 0.4rem;
+}
+.mobile::before{
+    content: '';
+    position: absolute;
+    top: 42%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #6DB36D;
+    width: 1.5rem;
+    height: 5rem;
+    border-radius: 0.4rem;
+}
+.screen{
+    height: 65rem;
+    width: 37rem;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom, rgb(108, 137, 146), rgb(0, 0, 0));
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    position: relative;
+    overflow: hidden ;
+}
+.screen::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f7f7f7;
+    width: 15rem;
+    height: 4rem;
+    border-radius: 2rem;
+}
+.speaker{
+    position: absolute;
+    top: 0.7rem;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    background: linear-gradient(to right, rgb(132, 218, 132), rgb(76, 122, 76));
+    
+    width: 8rem;
+    height: 0.6rem;
+    border-radius: 0.3rem;
+}
+.frontcam{
+    position: absolute;
+    top: 0.7rem;
+    right: 50%;
+    transform: translate(5rem, -50%);
+    background: linear-gradient(to right, rgb(132, 218, 132), rgb(76, 122, 76));
+
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 0.3rem;
+}
+.svgscreen{
+    transform: scale(2);
+}
+.svgout{
+    position: absolute;
+    top: 2rem;
+    left: 10rem;
+    height: 30rem;
+    width: 30rem;
+}
+.svgdown{
+    position: absolute;
+    bottom: 6rem;
+    right: 14rem;
+    height: 30rem;
+    width: 30rem;
+}
+.svgleft{
+    position: absolute;
+    bottom: 4rem;
+    left: -2rem;
+    transform: scale(1.5);
+    height: 30rem;
+    width: 30rem;
+    
+}
+
+@media screen and (max-width:1800px){
+    .svgleft{
+        left: -6rem;
+        bottom: 2rem;
+    }
+    .svgout{
+        left: 6rem;
+    }
+    .svgdown{
+        right: 9rem;
+        bottom: 5rem;
+    }
+}
+@media screen and (max-width:1600px){
+    .svgleft{
+        left: -15rem;
+        bottom: 2rem;
+    }
+    .svgout{
+        left: -3rem;
+    }
+    .svgdown{
+        right: 4rem;
+        bottom: 5rem;
+    }
+}
+@media screen and (max-width:1400px){
+    html{
+        font-size: 55%;
+    }
+    .svgleft{
+        transform: scale(1.2);
+        left: -15rem;
+        bottom: 5rem;
+    }
+    .svgout{
+        transform: scale(0.8);
+
+    }
+    .svgdown{
+        transform: scale(0.8);
+        
+    }
+    .svgscreen{
+        transform: scale(1.8);
+    }
+}
+@media screen and (max-width:1400px){
+    
+    .svgleft{
+        left: -20rem;
+        bottom: 5rem;
+    }
+    .svgout{
+        transform: scale(0.8);
+        left: -9rem;
+
+    }
+    .svgdown{
+        right: 2rem;
+        transform: scale(0.8);
+        
+    }
+    .svgscreen{
+        transform: scale(1.8);
+    }
+}
+@media screen and (max-width:1150px){
+   .btn1{
+    margin-top: 0;
+   }
+}
+@media screen and (max-width:1120px){
+   .svgdown{
+        right: -2rem;
+        bottom: 6rem;
+   }
+   .svgout{
+    left: -11rem;
+   }
+}
+@media screen and (max-width:1024px){
+   html{
+    font-size: 45%;
+   }
+   .signbtn{
+    height: 5rem;
+    width: 5rem;
+   }
+   .svgleft{
+    transform: scale(1.1);
+    left: -15rem;
+    bottom: 5rem;
+}
+.svgout{
+    transform: scale(0.7);
+
+}
+.svgdown{
+    transform: scale(0.7);
+    
+}
+}
+@media screen and (max-width:960px){
+    .svgleft{
+        left: -23rem;
+        bottom: 5rem;
+    }
+    .svgdown{
+         right: -6rem;
+         bottom: 6rem;
+    }
+    .svgout{
+     left: -15rem;
+     top: -2rem;
+    }
+ }
+@media screen and (max-width:768px){
+    .svgleft{
+        transform: scale(1);
+    }
+    .svgdown{
+         right: -6rem;
+         bottom: 6rem;
+    }
+    .svgout{
+        transform: scale(0.6);
+
+     left: -15rem;
+     top: -2rem;
+    }
+ }
