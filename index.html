@@ -24,7 +24,7 @@
 <body>
     <div class="coverdiv"></div>
     <div class="menucover">
-        <div class="cancelbtn"><i class="fa-solid fa-xmark"></i></div>
+        <div class="cancelbtn"><i class="fa-solid fa-chevron-right"></i></div>
         <div class="menuhead">Welcome to Hello, the chat of tomorrow!</div>
         <div class="menucoverlist">
             <div class="menucoveritem"><i class="fa-solid fa-house"></i>Home</div>
@@ -117,6 +117,18 @@
             
         </div>
     </section>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+        const firebaseConfig = {
+          apiKey: "AIzaSyCX0N4vF_J67e7ihJts-7qDGo_rAmN_sQQ",
+          authDomain: "hello-today-s-messenger.firebaseapp.com",
+          projectId: "hello-today-s-messenger",
+          storageBucket: "hello-today-s-messenger.appspot.com",
+          messagingSenderId: "824438570500",
+          appId: "1:824438570500:web:d009a5c845869841787f51"
+        };
+        const app = initializeApp(firebaseConfig);
+      </script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <script src="app.js"></script>

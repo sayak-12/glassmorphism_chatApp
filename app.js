@@ -73,3 +73,15 @@ window.onresize =()=>{
 
     }
 }
+document.querySelector(".signbtn").addEventListener("click", ()=>{
+    if (!(document.querySelector(".menucover").classList.contains("active"))) {
+        document.querySelector(".menucover").classList.add("active");
+    }
+    
+})
+document.querySelector(".cancelbtn").addEventListener("click", ()=>{
+    if ((document.querySelector(".menucover").classList.contains("active"))) {
+        document.querySelector(".menucover").classList.remove("active");
+    }
+    
+})
