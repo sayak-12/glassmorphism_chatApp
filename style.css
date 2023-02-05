@@ -203,7 +203,7 @@ html{
     align-items: center;
 }
 .mobile{
-    height: 80%;
+    aspect-ratio: 9/16;
     width: 340px;
     border-radius: 2rem;
     background: linear-gradient(to bottom, rgb(132, 218, 132), rgb(76, 122, 76));
@@ -606,5 +606,29 @@ html{
     
     .menucover{
         width: 90%;
+    }
+ }
+ @media screen and (max-height:730px){
+    .mobile{
+        width: 325px;
+    }
+ }
+ @media screen and (max-height:650px){
+    .mobile{
+        width: 280px;
+    }
+ }
+ @media screen and (max-height:600px){
+    .mobile{
+        width: 250px;
+    }
+    .svgleft{
+        bottom: 0;
+        transform: scale(1) translateX(10rem);
+    }
+    .svgout{
+        top: 1rem;
+        transform: scale(0.6) translateX(10rem);
+
     }
  }

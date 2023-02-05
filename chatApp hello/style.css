@@ -36,7 +36,7 @@ html{
     gap: 0.8rem;
 }
 .menu{
-    position: absolute;
+    /* position: absolute; */
     margin: 0 auto;
     gap: 3rem;
 }
@@ -203,8 +203,8 @@ html{
     align-items: center;
 }
 .mobile{
-    height: 70rem;
-    width: 40rem;
+    height: 80%;
+    width: 35%;
     border-radius: 2rem;
     background: linear-gradient(to bottom, rgb(132, 218, 132), rgb(76, 122, 76));
     display: flex;
@@ -214,8 +214,9 @@ html{
     filter: drop-shadow(1rem 1rem 0 rgb(60, 95, 60));
 }
 .screenborder{
-    height: 66rem;
-    width: 38rem;
+    position: relative;
+    height: 95%;
+    width: 95%;
     border-radius: 2rem;
     background-color: #f7f7f7;
     display: flex;
@@ -246,8 +247,8 @@ html{
     border-radius: 0.4rem;
 }
 .screen{
-    height: 65rem;
-    width: 37rem;
+    height: 96%;
+    width: 95%;
     border-radius: 2rem;
     background: linear-gradient(to bottom, rgb(108, 137, 146), rgb(0, 0, 0));
     display: flex;

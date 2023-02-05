@@ -27,9 +27,6 @@ window.onresize =()=>{
         document.querySelectorAll(".menuitem").forEach((item)=>{
             item.style.display = "none";
         })
-        document.querySelector(".menu").style.position = "absolute";
-
-        document.querySelector(".menu").style.right = "15%";
 
     }
     else{
@@ -41,7 +38,6 @@ window.onresize =()=>{
         document.querySelectorAll(".menuitem").forEach((item)=>{
             item.style.display = "flex";
         })
-        document.querySelector(".menu").style.position = "unset";
 
     }
 }
