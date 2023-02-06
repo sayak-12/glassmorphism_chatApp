@@ -610,12 +610,12 @@ html{
  }
  @media screen and (max-height:730px){
     .mobile{
-        width: 325px;
+        width: 240px;
     }
  }
  @media screen and (max-height:650px){
     .mobile{
-        width: 280px;
+        width: 240px;
     }
  }
  @media screen and (max-height:600px){
